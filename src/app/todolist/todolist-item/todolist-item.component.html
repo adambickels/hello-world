@@ -1,0 +1,16 @@
+<li [class.completed]="item.completed">
+  <div class="view">
+    <input class="toggle"
+           (change)="item.completed = $event.target.checked"
+           [checked]="item.completed"
+           type="checkbox">
+
+    <label appMarker>{{ item.title | up:'!'}} {{ item.created | date }}</label>
+
+    <button class="destroy"></button>
+
+  </div>
+
+  <input class="edit">
+
+</li>

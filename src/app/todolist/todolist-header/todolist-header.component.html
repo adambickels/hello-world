@@ -1,0 +1,14 @@
+<header class="header">
+
+  <h1 *appIf="flag">{{ headerTitle }}</h1>
+
+  <!--<template [appIf]="flag">-->
+    <!--<h1>{{ headerTitle }}</h1>-->
+  <!--</template>-->
+
+  <input class="new-todo"
+         *ngIf="flag"
+         (keydown.enter)="itemAdded.emit($event.target.value)"
+         placeholder="What needs to be done?"
+         appAutofocus>
+</header>
